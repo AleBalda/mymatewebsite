@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMate</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous"></script>
+    
+    <!-- LottieFiles -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+
+    <link rel="preload" href="videohero1-vmake.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="videosalutoavatar1-vmake (1).mp4" as="video" type="video/mp4">
+
+</head>
+
+
+<body>
+
+    <div id="vanta-bg"></div>
+
+
+    <!-- NAVBAR -->
+
+
+<div id="navbar"></div>
+  
+
+  <!-- HERO -->
+
+<section class="hero">
+    <video autoplay muted loop class="background-video" preload="auto" playsinline>
+    <source src="videohero1-vmake.mp4" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+</video>
+
+<video autoplay muted loop class="background-videomobile" preload="auto" playsinline>
+    <source src="videosalutoavatar1-vmake (1).mp4" type="video/mp4">
+    Il tuo browser non supporta il tag video.
+</video>
+    <div class="overlay"></div>
+   <div class="hero-content">
+        <h1> Scopri MyMate</h1>
+        <p>Il compagno di studio AI sempre al tuo fianco, ovunque e in ogni momento.</p>
+    </div>
+</section>
+
+<!-- INTRO AVATAR -->
+
+
+<section class="intro-avatar">
+    <div class="intro-content">
+        <p>
+            Grazie al nostro  <span class="highlight"> AVATAR 3D  </span>  basato su AI sarà come avere un compagno di studi da <strong>30 e lode <span class="highlight">SEMPRE DISPONIBILE</span>.
+        </p>
+    </div>
+</section>
+
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper" id="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <h1> SELEZIONA UNA MATERIA </h1>
+            <p> O aggiungine una nuova</p>
+            <div class="video-container">
+                <video src="selezionematerie.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+        <div class="swiper-slide">
+           <h1> CHIEDI QUALCOSA </h1>
+            <p> Seleziona il microfono e fai una domanda</p> 
+            <div class="video-container"> 
+                <video src="bottonevocale.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <h1> ASCOLTA LA RISPOSTA </h1>
+            <p> Memorizza più facilmente i concetti</p> 
+            <div class="video-container"> 
+                <video src="avatarparla.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+        <div class="swiper-slide">
+          <h1> NON PUOI PARLARE? </h1>
+            <p> Nessun problema chatta col nostro avatar!</p>
+            <div class="video-container">
+                <video src="chat.mp4" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+<section class="intro-avatar" id="funzioni accessorie">
+    <div class="intro-content">
+        <p>
+            Grazie alle <span class="highlight"> FUNZIONI ACCESSORIE </span> in MyMate trovi tutto ciò di cui ha bisogno uno studente.
+        </p>
+    </div>
+</section>
+
+<!-- SEZIONE TIMER E CALENDARIO -->
+
+<section class="features-section" id="features-section">
+    <!-- TIMER -->
+    <div class="feature-block">
+      <div class="feature-animation">
+        <dotlottie-player
+  src="https://lottie.host/56da5605-1684-4748-a096-1026aa14b4d2/7c9ufc0MZM.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 300px; height: 300px"
+  loop
+  autoplay
+></dotlottie-player>
+      </div>
+      <div class="feature-text">
+        <h2 style="text-align: right;"><i class="fas fa-stopwatch"></i> TIMER</h2>
+        <p style="text-align: right;">
+          Organizza le tue sessioni di studio in modo efficace con un timer flessibile e personalizzabile.
+        </p>
+        <ul style="text-align: right;" class="feature-list">
+          <li><i class="fas fa-sliders-h"></i> Imposta la durata dello <strong>studio</strong> e della <strong>pausa</strong> (es. 25/5 o 40/10 minuti)</li>
+          <li><i class="fas fa-sync-alt"></i> Scegli il numero di <strong>cicli</strong> da ripetere</li>
+          <li><i class="fas fa-eye"></i> Timer sempre visibile durante la sessione</li>
+        </ul>
+        <p style="text-align: right;">
+          <i class="fas fa-bolt"></i> Aumenta la <strong>concentrazione</strong>, migliora la <strong>gestione del tempo</strong> e ottieni il massimo da ogni sessione di studio.
+        </p>
+      </div>
+    </div>
+  
+    <!-- CALENDARIO -->
+    <div class="feature-block">
+      <div class="feature-text">
+            <h2><i class="fas fa-calendar-alt"></i> CALENDARIO</h2>
+            <p>
+              Tieni sotto controllo i tuoi impegni accademici e pianifica la settimana.
+            </p>
+            <ul class="feature-list">
+              <li><i class="fas fa-calendar-week"></i> Visualizza e organizza le <strong>attività settimanali</strong></li>
+              <li><i class="fas fa-university"></i> Consulta gli <strong>orari accademici</strong> direttamente nella piattaforma</li>
+              <li><i class="fas fa-book"></i> Pianifica lo <strong>studio in base a lezioni, esami e scadenze</strong></li>
+            </ul>
+            <p>
+              <i class="fas fa-lightbulb"></i> Una panoramica chiara ti rende più <strong>consapevole e produttivo</strong> ogni giorno.
+            </p>
+      </div>
+      <div class="feature-animation">
+        <dotlottie-player
+  src="https://lottie.host/e327be92-fba8-40e7-8e84-b77ecd6d995f/1nu8wsmdkf.lottie"
+  background="transparent"
+  speed="1"
+  style="width: 300px; height: 300px"
+  loop
+  autoplay
+></dotlottie-player>
+      </div>
+    </div>
+  </section>
+
+    <!-- INTRO PARTNERS -->
+
+  <section class="partners-carousel-section" id="partners-carousel-section">
+    <h2>Collaboriamo con</h2>
+    <div class="carousel-wrapper">
+      <div class="carousel-logos">
+        <!-- loghi ripetuti per il loop -->
+        <a href="https://team4idea.it/" target="_blank">
+          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+        </a>
+        <a href="https://ibicocca.unimib.it/" target="_blank">
+          <img src="logoibicocca.png" alt="Team4idea" />
+        </a>
+        <a href="https://team4idea.it/" target="_blank">
+          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+        </a>
+        <a href="https://ibicocca.unimib.it/" target="_blank">
+          <img src="logoibicocca.png" alt="Team4idea" />
+        </a>
+        
+  
+        <!-- duplicato per continuità -->
+        <a href="https://team4idea.it/" target="_blank">
+          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+        </a>
+        <a href="https://ibicocca.unimib.it/" target="_blank">
+          <img src="logoibicocca.png" alt="Team4idea" />
+        </a>
+        <a href="https://team4idea.it/" target="_blank">
+          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+        </a>
+        <a href="https://ibicocca.unimib.it/" target="_blank">
+          <img src="logoibicocca.png" alt="Team4idea" />
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  <div id="footer"></div>
+
+
+  <script>
+    fetch('navbar.html?t=' + Date.now())
+      .then(res => res.text())
+      .then(html => {
+        const navbarDiv = document.getElementById('navbar');
+        navbarDiv.innerHTML = html;
+  
+        // Dopo che è stata caricata la navbar, inizializza la logica
+        if (typeof initNavbar === 'function') {
+          initNavbar();
+        }
+      });
+  </script>
+
+  
+  <!-- Script per il caricamento del footer -->
+  <script>
+    fetch('footer.html?t=' + Date.now()) // evita cache
+        .then(res => res.text())
+        .then(html => {
+            const navbarDiv = document.getElementById('footer');
+            navbarDiv.innerHTML = html;
+            // Esegui script della navbar
+            const scripts = navbarDiv.querySelectorAll('script');
+            scripts.forEach(oldScript => {
+                const newScript = document.createElement('script');
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.textContent = oldScript.textContent;
+                }
+                document.body.appendChild(newScript);
+            });
+        });
+</script>
+  
+
+
+    <!-- Script Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="mymate.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+    </script>
+
+</body>
+</html>

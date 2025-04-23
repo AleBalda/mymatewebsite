@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyMate - Il tuo compagno di studio AI</title>
+    <link rel="stylesheet" href="style.css">
+  
+    
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous"></script>
+    
+    <!-- LottieFiles -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <style>
+    .faq-section {
+     padding: 0.5rem 2rem 2rem 2rem;
+background-color: #1a1a1a;
+      color: white;
+      max-width: 900px;
+      margin: 4% auto;
+    }
+    
+    .faq-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2.5rem;
+    }
+    
+    .faq-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .faq-item {
+      border-bottom: 1px solid #333;
+      padding: 1rem 0;
+    }
+    
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+    
+    .faq-question i {
+      transition: transform 0.3s ease;
+    }
+    
+
+    .faq-answer {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.4s ease;
+      font-size: 1rem;
+      color: #cccccc;
+      line-height: 1.6;
+      padding-top: 0;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+    }
+    .faq-answer.open {
+      opacity: 1;
+      padding-top: 0.8rem;
+    }
+    
+    
+  </style>
+</head>
+
+
+<body>
+
+    <div id="vanta-bg"></div>
+
+    <div id="navbar"></div>
+
+
+    <section class="faq-section">
+        <h2 class="faq-title"><i class="fas fa-question-circle"></i> Domande Frequenti</h2>
+      
+        <div class="faq-container">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Come funziona l’avatar intelligente?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Il nostro avatar è addestrato su materiali universitari reali per aiutarti a ripetere, capire e migliorare la tua preparazione in modo interattivo.
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Posso caricare le mie dispense?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Certamente! Puoi diventare un ambassador e contribuire alla formazione dell’avatar con i tuoi materiali. In cambio riceverai premi e vantaggi esclusivi.
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Le funzioni sono gratuite?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Alcune funzioni sono gratuite, mentre altre più avanzate sono disponibili con un abbonamento. Il timer e le flashcard sono sempre accessibili gratuitamente.
+            </div>
+          </div>
+      
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Quali università supportate?</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Al momento supportiamo l’Università di Peacock per il corso di Economia e Amministrazione dell’Impresa. Ma stiamo espandendoci rapidamente!
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <script>
+        fetch('navbar.html?t=' + Date.now())
+          .then(res => res.text())
+          .then(html => {
+            const navbarDiv = document.getElementById('navbar');
+            navbarDiv.innerHTML = html;
+      
+            // Dopo che è stata caricata la navbar, inizializza la logica
+            if (typeof initNavbar === 'function') {
+              initNavbar();
+            }
+          });
+      </script>
+
+<!-- Script per il caricamento del footer -->
+  <script>
+    fetch('footer.html?t=' + Date.now()) // evita cache
+        .then(res => res.text())
+        .then(html => {
+            const navbarDiv = document.getElementById('footer');
+            navbarDiv.innerHTML = html;
+            // Esegui script della navbar
+            const scripts = navbarDiv.querySelectorAll('script');
+            scripts.forEach(oldScript => {
+                const newScript = document.createElement('script');
+                if (oldScript.src) {
+                    newScript.src = oldScript.src;
+                } else {
+                    newScript.textContent = oldScript.textContent;
+                }
+                document.body.appendChild(newScript);
+            });
+        });
+</script>
+
+<div id="footer"></div>
+  
+  
+    <!-- Script Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="mymate.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  
+</body>
+</html>
