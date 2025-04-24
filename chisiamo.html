@@ -1,360 +1,396 @@
 <!DOCTYPE html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyMate - Il tuo compagno di studio AI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous" ></script>
 
     <!-- LottieFiles -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <style>
-        /* Aggiungi eventuale stile personalizzato qui */
-        .about-section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            color: #fff;
-        }
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+      
+/* SEZIONE VISION E MISSION */
+      
+      .about-section {
+        padding: 5rem 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        color: #fff;
+      }
+
+      .about-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem;
+        text-align: center;
+      }
+
+      .about-item {
+        flex: 1 1 45%;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 2rem;
+        border-radius: 10px;
+        backdrop-filter: blur(8px);
+        transition: transform 0.3s ease;
+      }
+
+      .about-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .about-item h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #00aaff;
+      }
+
+      .about-item p {
+        font-size: 1.8rem;
+        line-height: 1.6;
+        color: #cccccc;
+      }
+
+      .about-item .icon {
+        font-size: 2.5rem;
+        color: #00aaff;
+        margin-bottom: 1rem;
+      }
+
+/* SEZIONE TEAM */
+
+      .team-section {
+        padding: 5rem 2rem;
+        text-align: center;
+        margin-top: 10%;
+      }
+
+      .team-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: white;
+      }
+
+      .team-section p {
+        font-size: 1.1rem;
+        margin-bottom: 3rem;
+        color: white;
+        width: 80%;
+        margin: 2rem auto;
+      }
+
+      .team-members {
+        display: flex;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+
+      .team-member {
+        background: #2c3e50;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 2rem;
+        text-align: center;
+        flex-basis: 30%;
+        transition: transform 0.3s ease;
+      }
+
+      .team-member:hover {
+        transform: translateY(-10px);
+      }
+
+      .team-member img {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 1rem;
+        object-fit: contain;
+      }
+
+      .team-member h3 {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+        color: white;
+      }
+
+      .team-member .role {
+        font-size: 1rem;
+        color: #00aaff;
+        margin-bottom: 1rem;
+      }
+
+      .team-member ul {
+        font-size: 1.2rem;
+        color: rgb(212, 212, 212);
+        text-align: left;
+        margin: 0;
+      }
+
+      .team-member ul li {
+        margin-bottom: 0.5rem;
+      }
+
+/* SEZIONE CONTATTACI */
+
+      .contact-section {
+        padding: 5rem 2rem;
+        background: #111;
+        text-align: center;
+        color: white;
+      }
+
+      .contact-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        color: #00aaff;
+      }
+
+      .contact-section p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #ccc;
+      }
+
+      .email-box a {
+        display: inline-block;
+        font-size: 1.2rem;
+        background-color: #2c3e50;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .email-box a:hover {
+        background-color: #3b5770;
+      }
+
+@media screen and (max-width: 768px) {
+        
+/* SEZIONE VISION E MISSION */
 
         .about-block {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            gap: 3rem;
+          flex-direction: column;
         }
 
         .about-item {
-            flex: 1 1 45%;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 10px;
-            backdrop-filter: blur(8px);
-            transition: transform 0.3s ease;
-        }
-
-        .about-item:hover {
-            transform: translateY(-5px);
+          flex: 1 1 100%;
+          padding: 1.5rem;
         }
 
         .about-item h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: #00aaff;
+          font-size: 1.7rem;
         }
 
         .about-item p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #cccccc;
+          font-size: 1rem;
         }
 
-        .about-item .icon {
-            font-size: 2.5rem;
-            color: #00aaff;
-            margin-bottom: 1rem;
-        }
+/* SEZIONE TEAM */
 
-        /* Sezione team */
         .team-section {
-            padding: 5rem 2rem;
-            text-align: center;
-            margin-top:10%;
-        }
-
-        .team-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            color: white;
-        }
-
-        .team-section p {
-            font-size: 1.1rem;
-            margin-bottom: 3rem;
-            color: white;
-            width: 80%;
-            margin: 2rem auto;
+          padding: 5rem 2rem;
+          text-align: center;
+          width: 60%;
+          margin: 0 auto;
         }
 
         .team-members {
-            display: flex;
-            justify-content: space-around;
-            gap: 2rem;
+          flex-direction: column;
+          align-items: center;
+          margin-bottom: 10%;
         }
 
         .team-member {
-            background: #2C3E50;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 2rem;
-            text-align: center;
-            flex-basis: 30%;
-            transition: transform 0.3s ease;
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
+          flex-basis: 100%;
+          width: 100%;
+          max-width: 350px;
         }
 
         .team-member img {
-            width: 200px;
-            height: 200px;
-            margin-bottom: 1rem;
-            object-fit: contain;
-         }
+          width: 150px;
+          height: 150px;
+        }
 
         .team-member h3 {
-            font-size: 1.5rem;
-            margin: 0.5rem 0;
-            color: white;
+          font-size: 1.5rem;
         }
 
-        .team-member .role {
-            font-size: 1rem;
-            color: #00aaff;
-            margin-bottom: 1rem;
+        .team-member ul {
+          font-size: 1.2rem;
         }
 
-        .team-member p {
-            font-size: 1rem;
-            color: rgb(212, 212, 212);
+/* SEZIONE CONTATTACI */
+
+        .contact-section h2 {
+          font-size: 2rem;
         }
 
+        .contact-section p {
+          font-size: 1rem;
+          padding: 0 1rem;
+        }
 
-
-
-        .contact-section {
-            padding: 5rem 2rem;
-            background: #111;
-            text-align: center;
-            color: white;
-          }
-        
-          .contact-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #00aaff;
-          }
-        
-          .contact-section p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #ccc;
-          }
-        
-          .email-box a {
-            display: inline-block;
-            font-size: 1.2rem;
-            background-color: #2C3E50;
-            color: #fff;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            transition: background 0.3s ease;
-          }
-        
-          .email-box a:hover {
-            background-color: #3b5770;
-          }
-
-
-          @media screen and (max-width: 768px) {
-            /* Sezione Mission & Vision */
-            .about-block {
-              flex-direction: column;
-            }
-          
-            .about-item {
-              flex: 1 1 100%;
-              padding: 1.5rem;
-            }
-          
-            .about-item h2 {
-              font-size: 1.7rem;
-            }
-          
-            .about-item p {
-              font-size: 1rem;
-            }
-          
-            /* Sezione Il Team */
-
-            .team-section {
-                padding: 5rem 2rem;
-                text-align: center;
-                width: 60%;
-                margin: 0 auto;
-            }
-
-            .team-members {
-              flex-direction: column;
-              align-items: center;
-              margin-bottom: 10%;
-            }
-          
-            .team-member {
-              flex-basis: 100%;
-              width: 100%;
-              max-width: 350px;
-            }
-          
-            .team-member img {
-              width: 150px;
-              height: 150px;
-            }
-          
-            .team-member h3 {
-              font-size: 1.3rem;
-            }
-          
-            .team-member p {
-              font-size: 0.95rem;
-            }
-          
-            /* Sezione Contattaci */
-            .contact-section h2 {
-              font-size: 2rem;
-            }
-          
-            .contact-section p {
-              font-size: 1rem;
-              padding: 0 1rem;
-            }
-          
-            .email-box a {
-              font-size: 1rem;
-              padding: 0.8rem 1.5rem;
-            }
-          }
-
-          
+        .email-box a {
+          font-size: 1rem;
+          padding: 0.8rem 1.5rem;
+        }
+      }
     </style>
-</head>
+  </head>
 
 <body>
-
-    <div id="vanta-bg"></div>
-
-    <div id="navbar"></div>
-
-    <!-- Sezione Mission e Vision -->
-    <section class="about-section" id="about-section">
-        <div class="about-block">
-            <div class="about-item">
-                <h2> Mission <i class="fas fa-bullseye icon"></i> </h2>
-                <p>
-                  Fornire agli studenti universitari un compagno di studi AI interattivo e una suite completa di strumenti intelligenti per 
-                  rendere lo studio più efficace, personalizzato e coinvolgente, combattendo la procrastinazione e migliorando la concentrazione.
-                </p>
-            </div>
-            <div class="about-item">
-                <h2> Vision  <i class="fas fa-eye icon"></i></h2>
-                <p>
-                  Diventare l'ecosistema digitale indispensabile per ogni studente universitario, potenziando
-                  l'apprendimento e semplificando la vita accademica attraverso l'intelligenza artificiale e una community integrata.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Il Team -->
-    <section class="team-section" id="team-section">
-        <h2>Il Team</h2>
-        <p>
-            Il nostro team è composto da persone appassionate, innovative e determinati a rivoluzionare il modo in cui gli studenti imparano, collaborando per creare un'esperienza di apprendimento migliore per tutti.
-        </p>
-
-        <div class="team-members">
-            <!-- Primo membro del team -->
-            <div class="team-member">
-                <img src="alebfoto.jpeg" alt="Foto membro 1">
-                <h3>Alessandro Baldazzi</h3>
-                <div class="role">Co-Founder</div>
-                <p>
-                  Versatile e resiliente, apporta competenze in management, relazioni e marketing, con solide capacità di coordinamento 
-                  strategico, problem solving e sviluppo frontend. . 
-                </p>
-            </div>
-            <!-- Secondo membro del team -->
-            <div class="team-member">
-                <img src="aledfoto.jpg" alt="Foto membro 2">
-                <h3>Alessandro De Simone</h3>
-                <div class="role">Co-Founder</div>
-                <p>
-                  Energico e perfezionista, sempre alla ricerca di nuove soluzioni. Unisce leadership, marketing, pubbliche relazioni 
-                  e visione strategica per guidare la crescita aziendale.
-                </p>
-            </div>
-            <!-- Terzo membro del team -->
-            <div class="team-member">
-                <img src="giofoto.jpeg" alt="Foto membro 3">
-                <h3>Giovanni Di Guida</h3>
-                <div class="role">Co-Founder</div>
-                <p>
-                  Specialista in ingegneria informatica e intelligenza artificiale, impegnato nello sviluppo di soluzioni tecnologiche 
-                  innovative per trasformare idee in realtà all'avanguardia.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sezione Contattaci -->
-<section class="contact-section" id="contact-section">
-    <h2><i class="fas fa-envelope"></i> Contattaci</h2>
-    <p>Per collaborazioni, domande o qualsiasi altra informazione, scrivici a:</p>
     
-    <div class="email-box">
-      <a href="mailto:mymate.business@gmail.com">mymate.business@gmail.com</a>
-    </div>
-  </section>
+<!-- SFONDO VANTA.JS -->
 
+  <div id="vanta-bg"></div>
 
-
-  <div id="footer"></div>
-
-  <script>
-    fetch('navbar.html?t=' + Date.now())
-      .then(res => res.text())
-      .then(html => {
-        const navbarDiv = document.getElementById('navbar');
-        navbarDiv.innerHTML = html;
+<!-- NAVBAR -->
   
-        // Dopo che è stata caricata la navbar, inizializza la logica
-        if (typeof initNavbar === 'function') {
-          initNavbar();
-        }
-      });
-  </script>
+  <div id="navbar"></div>
 
-    <!-- Script per il caricamento del footer -->
-  <script>
-    fetch('footer.html?t=' + Date.now()) // evita cache
-        .then(res => res.text())
-        .then(html => {
-            const navbarDiv = document.getElementById('footer');
-            navbarDiv.innerHTML = html;
-            // Esegui script della navbar
-            const scripts = navbarDiv.querySelectorAll('script');
-            scripts.forEach(oldScript => {
-                const newScript = document.createElement('script');
-                if (oldScript.src) {
-                    newScript.src = oldScript.src;
-                } else {
-                    newScript.textContent = oldScript.textContent;
-                }
-                document.body.appendChild(newScript);
-            });
+<!-- SEZIONE VISION E MISSION -->
+
+    <section class="about-section" id="about-section">
+      <div class="about-block">
+        <div class="about-item">
+          <h2>Vision <i class="fas fa-eye icon"></i></h2>
+          <p>
+            Diventare l'ecosistema digitale indispensabile per ogni studente
+            universitario, potenziando l'apprendimento e semplificando la vita
+            accademica attraverso l'intelligenza artificiale e una community
+            integrata.
+          </p>
+        </div>
+        <div class="about-item">
+          <h2>Mission <i class="fas fa-bullseye icon"></i></h2>
+          <p>
+            Fornire agli studenti universitari un compagno di studi AI
+            interattivo e una suite completa di strumenti intelligenti per
+            rendere lo studio più efficace, personalizzato e coinvolgente,
+            combattendo la procrastinazione e migliorando la concentrazione.
+          </p>
+        </div>
+      </div>
+    </section>
+
+<!-- SEZIONE TEAM -->
+
+    <section class="team-section" id="team-section">
+      <h2>Il Team</h2>
+      <p>
+        MyMate è un progetto da studenti per studenti, nato dall’esperienza
+        diretta di chi conosce davvero le sfide del mondo universitario. Un team
+        giovane, unito dalla passione per l’innovazione e dall’obiettivo di
+        semplificare lo studio con soluzioni smart e accessibili.
+      </p>
+
+      <div class="team-members">
+        <!-- Primo membro del team -->
+        <div class="team-member">
+          <img src="immagini/alebfoto.jpeg" alt="Foto membro 1" />
+          <h3>Alessandro Baldazzi</h3>
+          <div class="role">Co-Founder</div>
+          <ul>
+            <li>
+              Laureando in Economia e Amministrazione delle Imprese in Bicocca
+            </li>
+            <li>Associato E-Club Bicocca</li>
+            <li>Associato Starting Finance Club Bicocca</li>
+          </ul>
+        </div>
+        <!-- Secondo membro del team -->
+        <div class="team-member">
+          <img src="immagini/aledfoto.jpg" alt="Foto membro 2" />
+          <h3>Alessandro De Simone</h3>
+          <div class="role">Co-Founder</div>
+          <ul>
+            <li>
+              Laureando in Economia e Amministrazione delle Imprese in Bicocca
+            </li>
+            <li>Associato E-Club Bicocca</li>
+            <li>Associato Starting Finance Club Bicocca</li>
+          </ul>
+        </div>
+        <!-- Terzo membro del team -->
+        <div class="team-member">
+          <img src="immagini/giofoto.jpeg" alt="Foto membro 3" />
+          <h3>Giovanni Di Guida</h3>
+          <div class="role">Co-Founder</div>
+          <ul>
+            <li>
+              Ingegnere informatico laureato presso l'università Federico II
+            </li>
+            <li>Specializzato in Intelligenza Artificiale</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+<!-- SEZIONE CONTATTACI -->
+
+    <section class="contact-section" id="contact-section">
+      <h2><i class="fas fa-envelope"></i> Contattaci</h2>
+      <p>
+        Per collaborazioni, domande o qualsiasi altra informazione, scrivici a:
+      </p>
+
+      <div class="email-box">
+        <a
+          href="mailto:mymate.business@gmail.com?subject=Richiesta%20Informazioni&body=Ciao%2C%20ho%20bisogno%20di%20informazioni%20su..."
+          >mymate.business@gmail.com</a
+        >
+      </div>
+    </section>
+
+<!-- FOOTER -->
+
+    <div id="footer"></div>
+
+<!-- CARICAMENTO DINAMICO NAVBAR -->
+
+    <script>
+      fetch("navbar.html?t=" + Date.now())
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("navbar");
+          navbarDiv.innerHTML = html;
+
+          // Dopo che è stata caricata la navbar, inizializza la logica
+          if (typeof initNavbar === "function") {
+            initNavbar();
+          }
         });
-</script>
+    </script>
 
+<!-- CARICAMENTO DINAMICO FOOTER -->
 
+    <script>
+      fetch("footer.html?t=" + Date.now()) // evita cache
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("footer");
+          navbarDiv.innerHTML = html;
+          // Esegui script della navbar
+          const scripts = navbarDiv.querySelectorAll("script");
+          scripts.forEach((oldScript) => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+        });
+    </script>
 
     <!-- Script Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
@@ -363,7 +399,5 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-</body>
-
+  </body>
 </html>

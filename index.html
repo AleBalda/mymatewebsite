@@ -12,37 +12,37 @@
     <!-- LottieFiles -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
-
+    <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-
-    <link rel="preload" href="videohero1-vmake.mp4" as="video" type="video/mp4">
-    <link rel="preload" href="videosalutoavatar1-vmake (1).mp4" as="video" type="video/mp4">
+    <!--Precaricamento video hero -->
+    <link rel="preload" href="video/videohero1-vmake.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="video/videosalutoavatar1-vmake (1).mp4" as="video" type="video/mp4">
 
 </head>
 
 
 <body>
 
-    <div id="vanta-bg"></div>
+<!-- SFONDO VANTA.JS -->
+
+<div id="vanta-bg"></div>
 
 
-    <!-- NAVBAR -->
-
-
+<!-- NAVBAR -->
+ 
 <div id="navbar"></div>
   
-
-  <!-- HERO -->
+<!-- HERO -->
 
 <section class="hero">
     <video autoplay muted loop class="background-video" preload="auto" playsinline>
-    <source src="videohero1-vmake.mp4" type="video/mp4">
+    <source src="video/videohero1-vmake.mp4" type="video/mp4">
     Il tuo browser non supporta il tag video.
 </video>
 
 <video autoplay muted loop class="background-videomobile" preload="auto" playsinline>
-    <source src="videosalutoavatar1-vmake (1).mp4" type="video/mp4">
+    <source src="video/videosalutoavatar1-vmake (1).mp4" type="video/mp4">
     Il tuo browser non supporta il tag video.
 </video>
     <div class="overlay"></div>
@@ -54,7 +54,6 @@
 
 <!-- INTRO AVATAR -->
 
-
 <section class="intro-avatar">
     <div class="intro-content">
         <p>
@@ -64,43 +63,45 @@
 </section>
 
 
-  <!-- Swiper -->
-  <div class="swiper mySwiper" id="swiper mySwiper">
+<!-- SWIPER -->
+
+<div class="swiper mySwiper" id="swiper mySwiper">
     <div class="swiper-wrapper">
         <div class="swiper-slide">
           <h1> SELEZIONA UNA MATERIA </h1>
-            <p> O aggiungine una nuova</p>
+            <p> Scegli cosa studiare! </p>
             <div class="video-container">
-                <video src="selezionematerie.mp4" autoplay loop muted playsinline></video>
+                <video src="video/selezionematerie.mp4" autoplay loop muted playsinline></video>
             </div>
         </div>
         <div class="swiper-slide">
            <h1> CHIEDI QUALCOSA </h1>
             <p> Seleziona il microfono e fai una domanda</p> 
             <div class="video-container"> 
-                <video src="bottonevocale.mp4" autoplay loop muted playsinline></video>
+                <video src="video/bottonevocale.mp4" autoplay loop muted playsinline></video>
             </div>
         </div>
         <div class="swiper-slide">
             <h1> ASCOLTA LA RISPOSTA </h1>
             <p> Memorizza più facilmente i concetti</p> 
             <div class="video-container"> 
-                <video src="avatarparla.mp4" autoplay loop muted playsinline></video>
+                <video src="video/avatarparla.mp4" autoplay loop muted playsinline></video>
             </div>
         </div>
         <div class="swiper-slide">
           <h1> NON PUOI PARLARE? </h1>
             <p> Nessun problema chatta col nostro avatar!</p>
             <div class="video-container">
-                <video src="chat.mp4" autoplay loop muted playsinline></video>
+                <video src="video/chat.mp4" autoplay loop muted playsinline></video>
             </div>
         </div>
     </div>
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
-  </div>
+</div>
 
+<!-- INTRO AVATAR -->
 
 <section class="intro-avatar" id="funzioni accessorie">
     <div class="intro-content">
@@ -113,8 +114,10 @@
 <!-- SEZIONE TIMER E CALENDARIO -->
 
 <section class="features-section" id="features-section">
-    <!-- TIMER -->
-    <div class="feature-block">
+    
+<!-- TIMER -->
+   
+<div class="feature-block">
       <div class="feature-animation">
         <dotlottie-player
   src="https://lottie.host/56da5605-1684-4748-a096-1026aa14b4d2/7c9ufc0MZM.lottie"
@@ -142,6 +145,7 @@
     </div>
   
     <!-- CALENDARIO -->
+    
     <div class="feature-block">
       <div class="feature-text">
             <h2><i class="fas fa-calendar-alt"></i> CALENDARIO</h2>
@@ -170,48 +174,51 @@
     </div>
   </section>
 
-    <!-- INTRO PARTNERS -->
+<!-- INTRO PARTNERS -->
 
-  <section class="partners-carousel-section" id="partners-carousel-section">
+<section class="partners-carousel-section" id="partners-carousel-section">
     <h2>Collaboriamo con</h2>
     <div class="carousel-wrapper">
       <div class="carousel-logos">
         <!-- loghi ripetuti per il loop -->
         <a href="https://team4idea.it/" target="_blank">
-          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+          <img src="immagini/logoteam4idea.jpeg" alt="Team4idea" />
         </a>
         <a href="https://ibicocca.unimib.it/" target="_blank">
-          <img src="logoibicocca.png" alt="Team4idea" />
+          <img src="immagini/logoibicocca.png" alt="Team4idea" />
         </a>
         <a href="https://team4idea.it/" target="_blank">
-          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+          <img src="immagini/logoteam4idea.jpeg" alt="Team4idea" />
         </a>
         <a href="https://ibicocca.unimib.it/" target="_blank">
-          <img src="logoibicocca.png" alt="Team4idea" />
+          <img src="immagini/logoibicocca.png" alt="Team4idea" />
         </a>
         
   
         <!-- duplicato per continuità -->
         <a href="https://team4idea.it/" target="_blank">
-          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+          <img src="immagini/logoteam4idea.jpeg" alt="Team4idea" />
         </a>
         <a href="https://ibicocca.unimib.it/" target="_blank">
-          <img src="logoibicocca.png" alt="Team4idea" />
+          <img src="immagini/logoibicocca.png" alt="Team4idea" />
         </a>
         <a href="https://team4idea.it/" target="_blank">
-          <img src="logoteam4idea.jpeg" alt="Team4idea" />
+          <img src="immagini/logoteam4idea.jpeg" alt="Team4idea" />
         </a>
         <a href="https://ibicocca.unimib.it/" target="_blank">
-          <img src="logoibicocca.png" alt="Team4idea" />
+          <img src="immagini/logoibicocca.png" alt="Team4idea" />
         </a>
       </div>
     </div>
   </section>
+
+<!-- FOOTER -->
   
-  <div id="footer"></div>
+<div id="footer"></div>
 
+<!-- CARICAMENTO DINAMICO NAVBAR -->
 
-  <script>
+<script>
     fetch('navbar.html?t=' + Date.now())
       .then(res => res.text())
       .then(html => {
@@ -223,11 +230,12 @@
           initNavbar();
         }
       });
-  </script>
+</script>
 
   
-  <!-- Script per il caricamento del footer -->
-  <script>
+<!-- CARICAMENTO DINAMICO FOOTER -->
+  
+<script>
     fetch('footer.html?t=' + Date.now()) // evita cache
         .then(res => res.text())
         .then(html => {
@@ -249,15 +257,15 @@
   
 
 
-    <!-- Script Vanta.js -->
+<!-- Script Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script src="mymate.js"></script>
 
-    <!-- Swiper JS -->
+<!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
+    
+<!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,

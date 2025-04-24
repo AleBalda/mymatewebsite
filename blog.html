@@ -1,206 +1,227 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyMate - Il tuo compagno di studio AI</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous"></script>
-    
+    <script
+      src="https://kit.fontawesome.com/434050fc2e.js"crossorigin="anonymous"></script>
+
     <!-- LottieFiles -->
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
+<style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #000;
+        color: #fff;
+      }
 
-        /* BLOG INTRO SECTION */
+/* BLOG INTRO SECTION */
+
+      .blog-intro {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 4rem 2rem;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .blog-text {
+        flex: 1 1 500px;
+      }
+
+      .blog-text h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .blog-text .highlight {
+        color: #00aaff;
+      }
+
+      .blog-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #cccccc;
+      }
+
+      .blog-animation {
+        flex: 1 1 400px;
+      }
+
+      .blog-animation dotlottie-player {
+        margin-top: 10%;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+      }
+
+/* NO POSTS SECTION */
+
+      .blog-posts {
+        padding: 3rem 2rem;
+        text-align: center;
+        color: #cccccc;
+      }
+
+      .no-posts {
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .no-posts i {
+        font-size: 2.5rem;
+        color: #00aaff;
+      }
+
+@media (max-width: 768px) {
         .blog-intro {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            padding: 4rem 2rem;
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
+          flex-direction: column-reverse;
+          align-items: center;
+          text-align: center;
+          padding: 2rem 1rem;
         }
 
         .blog-text {
-            flex: 1 1 500px;
+          flex: unset;
+          width: 100%;
         }
 
         .blog-text h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .blog-text .highlight {
-            color: #00aaff;
+          font-size: 2rem;
         }
 
         .blog-text p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #cccccc;
+          font-size: 1rem;
+          line-height: 1.6;
+          padding: 0 0.5rem;
         }
 
         .blog-animation {
-            flex: 1 1 400px;
+          flex: unset;
+          width: 100%;
+          display: flex;
+          justify-content: center;
         }
 
         .blog-animation dotlottie-player {
-            margin-top: 10%;
-            width: 100%;
-            max-width: 400px;
-            height: auto;
+          width: 80%;
+          max-width: 300px;
+          height: auto;
+          margin: 0 auto;
         }
-
-        /* NO POSTS SECTION */
-        .blog-posts {
-            padding: 3rem 2rem;
-            text-align: center;
-            color: #cccccc;
-        }
-
-        .no-posts {
-            font-size: 1.2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .no-posts i {
-            font-size: 2.5rem;
-            color: #00aaff;
-        }
-
-        @media (max-width: 768px) {
-            .blog-intro {
-                flex-direction: column-reverse;
-                align-items: center;
-                text-align: center;
-                padding: 2rem 1rem;
-              }
-            
-              .blog-text {
-                flex: unset;
-                width: 100%;
-              }
-            
-              .blog-text h1 {
-                font-size: 2rem;
-              }
-            
-              .blog-text p {
-                font-size: 1rem;
-                line-height: 1.6;
-                padding: 0 0.5rem;
-              }
-            
-              .blog-animation {
-                flex: unset;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-              }
-            
-              .blog-animation dotlottie-player {
-                width: 80%;
-                max-width: 300px;
-                height: auto;
-                margin: 0 auto;
-              }
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
+
+<!-- SFONDO VANTA.JS -->
 
     <div id="vanta-bg"></div>
 
+<!-- NAVBAR -->
+
     <div id="navbar"></div>
 
-    <!-- BLOG SECTION -->
+<!-- BLOG SECTION -->
+
     <section class="blog-intro">
-        <div class="blog-animation">
-            <dotlottie-player
-  src="https://lottie.host/a529c59b-9e00-43d5-b5ea-00a1934f9528/wbYmF0UijM.lottie"
-  background="transparent"
-  speed="1"
-  style="width: 400px; height: 400px"
-  loop
-  autoplay
-></dotlottie-player>
-        </div>
+      <div class="blog-animation">
+        <dotlottie-player
+          src="https://lottie.host/a529c59b-9e00-43d5-b5ea-00a1934f9528/wbYmF0UijM.lottie"
+          background="transparent"
+          speed="1"
+          style="width: 400px; height: 400px"
+          loop
+          autoplay
+        ></dotlottie-player>
+      </div>
 
-        <div class="blog-text">
-            <h1>Benvenuto nel blog di <span class="highlight">MyMate</span></h1>
-            <p>
-                In questo spazio potrai esplorare articoli, approfondimenti e guide pensate per aiutarti a migliorare il tuo metodo di studio, scoprire come sfruttare al meglio l’intelligenza artificiale nella preparazione universitaria e rimanere aggiornato sulle nuove funzionalità di MyMate.
-                <br><br>
-                Condivideremo anche testimonianze di studenti, aggiornamenti dal nostro team e consigli pratici per affrontare esami, progetti e sessioni intense. Che tu stia cercando ispirazione o strumenti concreti, il nostro blog sarà la tua risorsa fidata.
-            </p>
-        </div>
-
+      <div class="blog-text">
+        <h1>Benvenuto nel blog di <span class="highlight">MyMate</span></h1>
+        <p>
+          In questo spazio potrai esplorare articoli, approfondimenti e guide
+          pensate per aiutarti a migliorare il tuo metodo di studio, scoprire
+          come sfruttare al meglio l’intelligenza artificiale nella preparazione
+          universitaria e rimanere aggiornato sulle nuove funzionalità di
+          MyMate.
+          <br /><br />
+          Condivideremo anche testimonianze di studenti, aggiornamenti dal
+          nostro team e consigli pratici per affrontare esami, progetti e
+          sessioni intense. Che tu stia cercando ispirazione o strumenti
+          concreti, il nostro blog sarà la tua risorsa fidata.
+        </p>
+      </div>
     </section>
+
+<!--ANCORA NESSUN POST SECTION -->
 
     <section class="blog-posts">
-        <div class="no-posts">
-            <i class="fas fa-hourglass-half"></i>
-            <p>Non ci sono articoli disponibili al momento.<br>Stiamo lavorando per portarvi contenuti interessanti il prima possibile!</p>
-        </div>
+      <div class="no-posts">
+        <i class="fas fa-hourglass-half"></i>
+        <p>
+          Non ci sono articoli disponibili al momento.<br />Stiamo lavorando per
+          portarvi contenuti interessanti il prima possibile!
+        </p>
+      </div>
     </section>
 
-    <!-- Script caricamento navbar -->
-      
+<!-- CARICAMENTO DINAMICO NAVBAR -->
+
     <script>
-        fetch('navbar.html?t=' + Date.now())
-          .then(res => res.text())
-          .then(html => {
-            const navbarDiv = document.getElementById('navbar');
-            navbarDiv.innerHTML = html;
-      
-            // Dopo che è stata caricata la navbar, inizializza la logica
-            if (typeof initNavbar === 'function') {
-              initNavbar();
-            }
-          });
-      </script>
+      fetch("navbar.html?t=" + Date.now())
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("navbar");
+          navbarDiv.innerHTML = html;
 
-    <!-- Script per il caricamento del footer -->
-  <script>
-    fetch('footer.html?t=' + Date.now()) // evita cache
-        .then(res => res.text())
-        .then(html => {
-            const navbarDiv = document.getElementById('footer');
-            navbarDiv.innerHTML = html;
-            // Esegui script della navbar
-            const scripts = navbarDiv.querySelectorAll('script');
-            scripts.forEach(oldScript => {
-                const newScript = document.createElement('script');
-                if (oldScript.src) {
-                    newScript.src = oldScript.src;
-                } else {
-                    newScript.textContent = oldScript.textContent;
-                }
-                document.body.appendChild(newScript);
-            });
+          // Dopo che è stata caricata la navbar, inizializza la logica
+          if (typeof initNavbar === "function") {
+            initNavbar();
+          }
         });
-</script>
+    </script>
 
+<!-- CARICAMENTO DINAMICO FOOTER -->
 
-<div id="footer"></div>
+    <script>
+      fetch("footer.html?t=" + Date.now()) // evita cache
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("footer");
+          navbarDiv.innerHTML = html;
+          // Esegui script della navbar
+          const scripts = navbarDiv.querySelectorAll("script");
+          scripts.forEach((oldScript) => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+        });
+    </script>
+
+<!-- FOOTER -->
+
+    <div id="footer"></div>
 
     <!-- Script Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
@@ -209,6 +230,5 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-</body>
+  </body>
 </html>

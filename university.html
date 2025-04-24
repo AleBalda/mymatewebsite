@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyMate - Il tuo compagno di studio AI</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="university.css">
-  
-    
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="university.css" />
+
     <!-- FontAwesome -->
-    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/434050fc2e.js"crossorigin="anonymous"></script>
+
     <!-- LottieFiles -->
-    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"type="module"></script>
 
     <!-- Swiper -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 
-
 <body>
+    
+<!-- SFONDO VANTA.JS -->
 
-    <div id="vanta-bg"></div>
-
-    <div id="navbar"></div>
+<div id="vanta-bg"></div>
 
 
+<!-- NAVBAR -->
+
+<div id="navbar"></div>
+
+<!-- SEZIONE UNIVERSITA' IN CUI E' PRESENTE MYMATE -->
 
     <section class="avatar-trained-section" id="avatar-trained-section">
       <div class="avatar-trained-content">
         <h2>
-          <i class="fas fa-user-graduate"></i> Il nostro avatar è <span class="highlight">addestrato</span> sulle materie del tuo corso di studi!
+          <i class="fas fa-user-graduate"></i> Il nostro avatar è
+          <span class="highlight">addestrato</span> sulle materie del tuo corso
+          di studi!
         </h2>
         <p>
-          Grazie al contributo di studenti come te, il nostro sistema si espande ogni giorno di più. Scopri se  <strong>MyMate</strong> è già presente nella tua università
-          e aiutaci a rendere il nostro avatar ancora più intelligente!
+          Grazie al contributo di studenti come te, MyMate si espande ogni
+          giorno di più. Scopri se <strong>MyMate</strong> è già presente nella
+          tua università e aiutaci a rendere il nostro avatar ancora più
+          intelligente!
         </p>
         <div class="arrow-down">
           <i class="fas fa-arrow-down"></i>
         </div>
       </div>
     </section>
-    
-
-
-
-
 
     <section class="universities-section" id="universities-section">
       <div class="universities-intro">
-        <h2><i class="fas fa-university"></i> Università attualmente disponibili</h2>
+        <h2>
+          <i class="fas fa-university"></i> Università attualmente disponibili
+        </h2>
         <p>MyMate è già presente in queste università:</p>
       </div>
-    
+
       <div class="university-list">
         <div class="university-card">
           <h3>Università di Milano Bicocca</h3>
@@ -61,92 +64,116 @@
         </div>
         <!-- Altre card qui in futuro -->
       </div>
-    
+
+      <!-- Richieste per aggiungere nuvo Università -->
+
       <div class="university-request">
-        <h3><i class="fas fa-question-circle"></i> La tua università non è ancora presente?</h3>
+        <h3>
+          <i class="fas fa-question-circle"></i> La tua università non è ancora
+          presente?
+        </h3>
         <p>
-          Segnalacelo! Più richieste riceviamo da una università, più velocemente potremo portare la nostra piattaforma anche lì.
+          Segnalacelo! Più richieste riceviamo da una università, più
+          velocemente potremo portare MyMate anche lì.
         </p>
         <form class="request-form">
           <input type="text" placeholder="Nome della tua università" required />
           <input type="text" placeholder="Corso di laurea" required />
-          <button type="submit"><i class="fas fa-paper-plane"></i> Invia richiesta</button>
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Invia richiesta
+          </button>
         </form>
       </div>
     </section>
-    
 
-    <div style="display: flex; justify-content: center; align-items: center;  margin-top: 10%">
+<!-- FRECCIA IN BASSO -->
+
+    <div
+      style="display: flex; justify-content: center; align-items: center; margin-top: 10%;">
       <div class="arrow-down">
         <i class="fas fa-arrow-down"></i>
       </div>
     </div>
-    
 
-
+<!-- SEZIONE AMBASSADOR -->
 
     <section class="ambassador-section" id="ambassador-section">
       <div class="ambassador-content">
-        <h2><i class="fas fa-star"></i> Sei uno studente? Diventa un <span class="highlight">ambassador</span></h2>
+        <h2>
+          <i class="fas fa-star"></i> Sei uno studente? Diventa un
+          <span class="highlight">ambassador</span>
+        </h2>
         <p>
-          Aiutaci a rendere il nostro software sempre più intelligente! Se sei uno studente universitario e vuoi contribuire, puoi diventare 
-          un nostro ambassador: collaborerai con noi condividendo le risorse e i contenuti affrontati durante il tuo percorso universitario. <br><br>
-          In cambio, riceverai <strong>ricompense esclusive</strong>, accessi anticipati alla piattaforma e potrai far parte di una community di studenti motivati e innovativi.
+          Aiutaci a rendere MyMate sempre più intelligente! Se sei uno studente
+          universitario e vuoi contribuire, puoi diventare un nostro ambassador:
+          collaborerai con noi condividendo le risorse e i contenuti affrontati
+          durante il tuo percorso universitario. <br /><br />
+          In cambio, riceverai <strong>ricompense esclusive</strong>, accessi
+          anticipati a MyMate e potrai far parte di una community di studenti
+          motivati e innovativi.
         </p>
-        
+
         <form class="ambassador-form">
           <input type="text" placeholder="Nome e Cognome" required />
           <input type="email" placeholder="Email universitaria" required />
-          <input type="text" placeholder="Università e Corso di laurea" required />
-          <textarea placeholder="Parlaci brevemente di te e del tuo percorso universitario" required></textarea>
-          <button type="submit"><i class="fas fa-paper-plane"></i> Invia candidatura</button>
+          <input
+            type="text"
+            placeholder="Università e Corso di laurea"
+            required
+          />
+          <textarea
+            placeholder="Parlaci brevemente di te e del tuo percorso universitario"
+            required
+          ></textarea>
+          <button type="submit">
+            <i class="fas fa-paper-plane"></i> Invia candidatura
+          </button>
         </form>
       </div>
     </section>
-    
 
-
+<!-- FOOTER -->
 
     <div id="footer"></div>
 
-
+<!-- CARICAMENTO DINAMICO NAVBAR -->
 
     <script>
-      fetch('navbar.html?t=' + Date.now())
-        .then(res => res.text())
-        .then(html => {
-          const navbarDiv = document.getElementById('navbar');
+      fetch("navbar.html?t=" + Date.now())
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("navbar");
           navbarDiv.innerHTML = html;
-    
+
           // Dopo che è stata caricata la navbar, inizializza la logica
-          if (typeof initNavbar === 'function') {
+          if (typeof initNavbar === "function") {
             initNavbar();
           }
         });
     </script>
-    
 
-  <script>
-    fetch('footer.html?t=' + Date.now()) // evita cache
-        .then(res => res.text())
-        .then(html => {
-            const navbarDiv = document.getElementById('footer');
-            navbarDiv.innerHTML = html;
-            // Esegui script della navbar
-            const scripts = navbarDiv.querySelectorAll('script');
-            scripts.forEach(oldScript => {
-                const newScript = document.createElement('script');
-                if (oldScript.src) {
-                    newScript.src = oldScript.src;
-                } else {
-                    newScript.textContent = oldScript.textContent;
-                }
-                document.body.appendChild(newScript);
-            });
+<!-- CARICAMENTO DINAMICO FOOTER -->
+
+    <script>
+      fetch("footer.html?t=" + Date.now()) // evita cache
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("footer");
+          navbarDiv.innerHTML = html;
+          // Esegui script della navbar
+          const scripts = navbarDiv.querySelectorAll("script");
+          scripts.forEach((oldScript) => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
         });
-</script>
+    </script>
 
-  
     <!-- Script Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
@@ -154,7 +181,5 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  
-</body>
+  </body>
 </html>
