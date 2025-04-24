@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyMate - Il tuo compagno di studio AI</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/434050fc2e.js" crossorigin="anonymous" ></script>
+
+    <!-- LottieFiles -->
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<style>
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+/* SEZIONE COMING SOON */
+
+    .coming-soon-section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .coming-soon-section h2 {
+      font-size: 3rem;
+      color: #00aaff;
+      margin-bottom: 2rem;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-icon {
+      font-size: 2.7rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      color: #00aaff;
+    }
+
+    .feature-description {
+      font-size: 1.2rem;
+      color: #ccc;
+      line-height: 1.5;
+    }
+
+/* SEZIONE FEEDBACK */
+
+    .user-feedback-section {
+        padding: 5rem 2rem;
+        background-color: #121212;
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid #00aaff;
+      }
+      
+      .user-feedback-section h2 {
+        font-size: 2.5rem;
+        color: #00aaff;
+        margin-bottom: 1rem;
+      }
+      
+      .user-feedback-section .description {
+        font-size: 1.3rem;
+        color: #ccc;
+        margin-bottom: 2rem;
+      }
+      
+      .feedback-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: left;
+      }
+      
+      .form-group label {
+        font-weight: 600;
+        color: #00aaff;
+        margin-bottom: 0.5rem;
+        display: block;
+      }
+      
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border: none;
+        border-radius: 6px;
+        background-color: #1e1e1e;
+        color: #fff;
+        font-size: 1rem;
+      }
+      
+      .feedback-form button {
+        align-self: center;
+        padding: 0.8rem 2rem;
+        background-color: #00aaff;
+        border: none;
+        border-radius: 8px;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      
+      .feedback-form button:hover {
+        background-color: #0095dd;
+      }
+
+    @media screen and (max-width: 768px) {
+      
+        .coming-soon-section h2 {
+        font-size: 2.2rem;
+      }
+
+      .feedback-form {
+        padding: 0 1rem;
+      }
+    }
+</style>
+</head>
+<body>
+
+<!-- SFONDO VANTA.JS -->
+
+<div id="vanta-bg"></div>
+
+<!-- NAVBAR -->
+  
+  <div id="navbar"></div>
+
+<!-- SEZIONE COMING SOON -->
+
+  <section class="coming-soon-section">
+    <h2>🚀 In Arrivo su MyMate</h2>
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">📂</div>
+        <div class="feature-title">Modifica file in app</div>
+        <div class="feature-description">
+          Carica, modifica e annota direttamente i tuoi materiali di studio, senza mai uscire dalla piattaforma.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <div class="feature-title">Schemi e Riassunti</div>
+        <div class="feature-description">
+          Genera in pochi secondi mappe concettuali e riassunti chiari e precisi per ogni argomento.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🃏</div>
+        <div class="feature-title">Flashcards</div>
+        <div class="feature-description">
+          Ripassa in modo smart con flashcards interattive create automaticamente dai tuoi appunti.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎤</div>
+        <div class="feature-title">Simulazione interrogazione</div>
+        <div class="feature-description">
+          Allenati con l’avatar come se fossi davvero davanti al prof: ti fa domande, ascolta le risposte e ti dà feedback.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📝</div>
+        <div class="feature-title">Quiz</div>
+        <div class="feature-description">
+          Metti alla prova la tua preparazione con quiz personalizzati, creati su misura per ogni materia.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎮</div>
+        <div class="feature-title">Gamification</div>
+        <div class="feature-description">
+          Studiare sarà ancora più motivante grazie a badge, sfide e premi virtuali!
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">📅</div>
+        <div class="feature-title">Pianificazione con AI</div>
+        <div class="feature-description">
+          L’AI ti aiuta a creare un piano di studio su misura, in base ai tuoi obiettivi e scadenze.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎧</div>
+        <div class="feature-title">Podcast</div>
+        <div class="feature-description">
+          Ascolta spiegazioni e approfondimenti sul mondo scolastico ovunque tu sia, anche mentre fai una passeggiata.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🛍️</div>
+        <div class="feature-title">Marketplace</div>
+        <div class="feature-description">
+          Scopri risorse utili, app consigliate, materiali condivisi da altri studenti e molto altro.
+        </div>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🤝</div>
+        <div class="feature-title">Partnership di valore</div>
+        <div class="feature-description">
+          Collaboriamo con community e realtà del mondo education per offrirti contenuti esclusivi e opportunità uniche.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- SEZIONE FEEDBACK -->
+
+  <section class="user-feedback-section">
+    <h2>🗳️ Dicci la tua!</h2>
+    <p class="description">
+      Quale tra queste novità vorresti vedere per prima su MyMate? <br>
+      Hai in mente una funzione utile che non è ancora presente? Faccelo sapere!
+    </p>
+  
+    <form class="feedback-form">
+      <div class="form-group">
+        <label for="priorita">Scegli la funzionalità che vorresti prima:</label>
+        <select id="priorita" name="priorita" required>
+          <option value="">-- Seleziona un'opzione --</option>
+          <option value="modifica-file">📂 Modifica file in app</option>
+          <option value="schemi">🧠 Schemi e Riassunti</option>
+          <option value="flashcards">🃏 Flashcards</option>
+          <option value="interrogazione">🎤 Simulazione interrogazione</option>
+          <option value="quiz">📝 Quiz</option>
+          <option value="gamification">🎮 Gamification</option>
+          <option value="ai-planner">📅 Pianificazione con AI</option>
+          <option value="podcast">🎧 Podcast</option>
+          <option value="marketplace">🛍️ Marketplace</option>
+          <option value="partnership">🤝 Partnership di valore</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="idea">Hai un'idea o una funzione che ti piacerebbe vedere?</label>
+        <textarea id="idea" name="idea" rows="5" placeholder="Scrivi qui la tua proposta..."></textarea>
+      </div>
+  
+      <button type="submit">Invia</button>
+    </form>
+  </section>
+  
+
+<!-- FOOTER -->
+
+<div id="footer"></div>
+
+<!-- CARICAMENTO DINAMICO NAVBAR -->
+
+    <script>
+      fetch("navbar.html?t=" + Date.now())
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("navbar");
+          navbarDiv.innerHTML = html;
+
+          // Dopo che è stata caricata la navbar, inizializza la logica
+          if (typeof initNavbar === "function") {
+            initNavbar();
+          }
+        });
+    </script>
+
+<!-- CARICAMENTO DINAMICO FOOTER -->
+
+    <script>
+      fetch("footer.html?t=" + Date.now()) // evita cache
+        .then((res) => res.text())
+        .then((html) => {
+          const navbarDiv = document.getElementById("footer");
+          navbarDiv.innerHTML = html;
+          // Esegui script della navbar
+          const scripts = navbarDiv.querySelectorAll("script");
+          scripts.forEach((oldScript) => {
+            const newScript = document.createElement("script");
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            document.body.appendChild(newScript);
+          });
+        });
+    </script>
+
+    <!-- Script Vanta.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script src="mymate.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+</body>
+</html>

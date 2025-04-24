@@ -497,6 +497,7 @@ html {
   margin-right: 1.2rem;
   font-size: 1.6rem;
   transition: transform 0.3s ease;
+  color: #00aaff;
 }
 
 .social-icons a:hover {
@@ -504,18 +505,6 @@ html {
   opacity: 0.8;
 }
 
-/* Colori originali */
-.social-icons a .fa-instagram {
-  color: #e4405f;
-}
-
-.social-icons a .fa-linkedin {
-  color: #0a66c2;
-}
-
-.social-icons a .fa-tiktok {
-  color: #25f4ee; /* azzurro TikTok */
-}
 
 .footer-right {
   display: flex;
@@ -669,10 +658,11 @@ html {
 
   .background-videomobile {
     display: block;
+    opacity: 1;
   }
 
   .overlay {
-    background: none;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   }
 
   .hero-content {
@@ -727,13 +717,16 @@ html {
     object-fit: contain;
   }
 
-  .swiper-button-prev {
-    display: none !important;
+  .swiper-button-prev { 
+    top: 95% !important;
+    left: 20% !important;
   }
 
-  .swiper-button-next {
-    display: none !important;
+  .swiper-button-next { 
+    top: 95% !important;
+    right: 20% !important;
   }
+
   .video-container {
     width: 90%;
     aspect-ratio: 16/9;
@@ -796,12 +789,10 @@ html {
   /* SEZIONE PARTNER*/
 
   .carousel-logos {
-    gap: 1.5rem;
+    gap: 1.8rem;
   }
 
-  .carousel-logos img {
-    max-width: 120px;
-  }
+  
 
   /* FOOTER */
 
