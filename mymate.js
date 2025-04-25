@@ -155,3 +155,6 @@ window.addEventListener("resize", () => {
   carousel.style.transition = "none";
   carousel.style.transform = `translateX(-${newWidth * index}px)`;
 });
+
+
+

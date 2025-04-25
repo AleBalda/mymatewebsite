@@ -71,6 +71,11 @@
         opacity: 1;
         padding-top: 0.8rem;
       }
+
+      .faq-question i.fa-chevron-up {
+        transform: rotate(180deg);
+      }
+
 </style>
 </head>
 
@@ -94,53 +99,75 @@
       <div class="faq-container">
         <div class="faq-item">
           <div class="faq-question">
-            <span>Come funziona l’avatar intelligente?</span>
+            <span>È necessario parlare con l’avatar o posso anche scrivere?</span>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Il nostro avatar è addestrato su materiali universitari reali per
-            aiutarti a ripetere, capire e migliorare la tua preparazione in modo
-            interattivo.
+            Puoi scegliere tu: se preferisci interagire in forma scritta, MyMate ti risponde anche via chat. La modalità vocale è pensata per simulare l’orale, ma non è obbligatoria.
           </div>
         </div>
-
+      
         <div class="faq-item">
           <div class="faq-question">
-            <span>Posso caricare le mie dispense?</span>
+            <span>MyMate è gratuito o a pagamento?</span>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Certamente! Puoi diventare un ambassador e contribuire alla
-            formazione dell’avatar con i tuoi materiali. In cambio riceverai
-            premi e vantaggi esclusivi.
+            MyMate è completamente gratuito!
           </div>
         </div>
-
+      
         <div class="faq-item">
           <div class="faq-question">
-            <span>Le funzioni sono gratuite?</span>
+            <span>Posso usare MyMate per prepararmi a un esame orale?</span>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Alcune funzioni sono gratuite, mentre altre più avanzate sono
-            disponibili con un abbonamento. Il timer e le flashcard sono sempre
-            accessibili gratuitamente.
+            Certo! Puoi simulare vere e proprie interrogazioni parlando con l’avatar, allenarti con domande strutturate o chiedere spiegazioni come se fossi con un compagno di studio molto preparato.
           </div>
         </div>
-
+      
         <div class="faq-item">
           <div class="faq-question">
-            <span>Quali università supportate?</span>
+            <span>Posso caricare i miei appunti o materiali?</span>
             <i class="fas fa-chevron-down"></i>
           </div>
           <div class="faq-answer">
-            Al momento supportiamo l’Università di Peacock per il corso di
-            Economia e Amministrazione dell’Impresa. Ma stiamo espandendoci
-            rapidamente!
+            Sì, puoi già caricare dispense, schemi o riassunti. L’avatar li analizzerà per aiutarti a ripassarli o semplificare i concetti, rendendo lo studio ancora più personalizzato.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Posso usare MyMate anche con i miei amici o compagni di corso?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Al momento l’esperienza è pensata per lo studio individuale, ma stiamo lavorando a funzionalità collaborative che ti permetteranno di condividere materiali, quiz o sfide con i tuoi amici.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>MyMate può sostituire un tutor umano?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            MyMate non vuole sostituire un tutor, ma essere un alleato sempre disponibile per integrare il tuo studio: ti spiega i concetti, ti fa domande orali, ti aiuta a organizzarti e a restare concentrato.
+          </div>
+        </div>
+      
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Posso suggerire nuove funzionalità o dare feedback?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-answer">
+            Assolutamente! MyMate cresce con te. Puoi inviarci feedback o proposte via email o direttamente dall’app: ogni suggerimento è utile per migliorare il servizio.
           </div>
         </div>
       </div>
-    </section>
+      </section>
 
     
 <!-- FOOTER -->
@@ -184,6 +211,69 @@
           });
         });
     </script>
+
+<!-- APERTURA RISPOSTA FAQ -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const faqItems = document.querySelectorAll(".faq-item");
+        let activeItem = null;
+    
+        faqItems.forEach((item) => {
+          const icon = item.querySelector(".faq-question i");
+          const answer = item.querySelector(".faq-answer");
+    
+          icon.addEventListener("click", (e) => {
+            e.stopPropagation();
+    
+            // Chiudi l'attuale aperto se clicchi un altro
+            if (activeItem && activeItem !== item) {
+              const activeIcon = activeItem.querySelector(".faq-question i");
+              const activeAnswer = activeItem.querySelector(".faq-answer");
+    
+              activeAnswer.style.maxHeight = null;
+              activeAnswer.classList.remove("open");
+              activeIcon.classList.remove("fa-chevron-up");
+              activeIcon.classList.add("fa-chevron-down");
+              activeItem = null;
+            }
+    
+            // Toggle apertura/chiusura
+            const isOpen = answer.classList.contains("open");
+    
+            if (!isOpen) {
+              answer.style.maxHeight = answer.scrollHeight + "px";
+              answer.classList.add("open");
+              icon.classList.remove("fa-chevron-down");
+              icon.classList.add("fa-chevron-up");
+              activeItem = item;
+            } else {
+              answer.style.maxHeight = null;
+              answer.classList.remove("open");
+              icon.classList.remove("fa-chevron-up");
+              icon.classList.add("fa-chevron-down");
+              activeItem = null;
+            }
+          });
+        });
+    
+        // Click fuori chiude la risposta aperta
+        document.addEventListener("click", (e) => {
+          if (activeItem && !activeItem.contains(e.target)) {
+            const icon = activeItem.querySelector(".faq-question i");
+            const answer = activeItem.querySelector(".faq-answer");
+    
+            answer.style.maxHeight = null;
+            answer.classList.remove("open");
+            icon.classList.remove("fa-chevron-up");
+            icon.classList.add("fa-chevron-down");
+            activeItem = null;
+          }
+        });
+      });
+    </script>
+    
+    
 
     <!-- Script Vanta.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
