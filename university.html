@@ -236,12 +236,12 @@
       submitBtn.disabled = true;
   
       // URL corretto per il secondo Google Form (formResponse, NON edit o viewform)
-      const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSfHtRjLnh0aWmcBxfu8KDiCPhhnplQHkwGz38NRCNw-GEh3aw/formResponse";
-      
+      const googleFormURL = "https://docs.google.com/forms/d/e/1FAIpQLSdnpl5JV5dwS_-Hm6DFdiE-L_tpM-SnvVMeSVBN5mdwFULl2Q/formResponse";
+
       const formData = new FormData();
-      formData.append("entry.883744878", fullName);  // <-- Cambia XXXXX con il tuo ID reale
-      formData.append("entry.1947903520", email);      // <-- Cambia YYYYY con il tuo ID reale
-      formData.append("entry.537662864", universityDegree); // <-- Cambia ZZZZZ con il tuo ID reale
+      formData.append("entry.537662864", fullName);  // <-- Cambia XXXXX con il tuo ID reale
+      formData.append("entry.883744878", email);      // <-- Cambia YYYYY con il tuo ID reale
+      formData.append("entry.1947903520", universityDegree); // <-- Cambia ZZZZZ con il tuo ID reale
       formData.append("entry.554461599", aboutYou);    // <-- Cambia AAAAA con il tuo ID reale
   
       fetch(googleFormURL, {
