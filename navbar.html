@@ -68,8 +68,12 @@
     </li>
     <!-- Pulsanti solo per mobile -->
     <div class="auth-buttons mobile-auth">
-      <button class="login-btn" onclick="alert('Disponibile solo da desktop')">Accedi</button>
-      <button class="register-btn" onclick="alert('Disponibile solo da desktop')">Registrati</button>
+      <button class="login-btn" id="loginBtn">Accedi</button>
+      <button class="register-btn" id="registerBtn">Registrati</button>
+    </div>
+    
+    <div id="popupMessage" style="display:none; position:fixed; top:20px; left:50%; transform:translateX(-50%); background:#2c3e50; padding:20px; border:1px solid #ccc; border-radius:10px; box-shadow:0px 0px 10px rgba(0,0,0,0.2); z-index:9999; color:white;  text-align:center; ">
+      Attualmente disponibile solo da desktop!
     </div>
     
   </ul>

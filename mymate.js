@@ -50,6 +50,20 @@ function initNavbar() {
     }
   });
 
+
+  function showPopup() {
+    const popup = document.getElementById('popupMessage');
+    popup.style.display = 'block';
+    setTimeout(() => {
+      popup.style.display = 'none';
+    }, 2000); // Dopo 2 secondi sparisce
+  }
+
+  document.getElementById('loginBtn').addEventListener('click', showPopup);
+  document.getElementById('registerBtn').addEventListener('click', showPopup);
+
+
+
 // HAMBURGER MENU
 
   const hamburger = document.getElementById("hamburger");
