@@ -75,69 +75,7 @@
       line-height: 1.5;
     }
 
-/* SEZIONE FEEDBACK */
 
-    .user-feedback-section {
-        padding: 5rem 2rem;
-        background-color: #121212;
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: center;
-        border: 2px solid #00aaff;
-      }
-      
-      .user-feedback-section h2 {
-        font-size: 2.5rem;
-        color: #00aaff;
-        margin-bottom: 1rem;
-      }
-      
-      .user-feedback-section .description {
-        font-size: 1.3rem;
-        color: #ccc;
-        margin-bottom: 2rem;
-      }
-      
-      .feedback-form {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: left;
-      }
-      
-      .form-group label {
-        font-weight: 600;
-        color: #00aaff;
-        margin-bottom: 0.5rem;
-        display: block;
-      }
-      
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 0.8rem;
-        border: none;
-        border-radius: 6px;
-        background-color: #1e1e1e;
-        color: #fff;
-        font-size: 1rem;
-      }
-      
-      .feedback-form button {
-        align-self: center;
-        padding: 0.8rem 2rem;
-        background-color: #00aaff;
-        border: none;
-        border-radius: 8px;
-        color: white;
-        font-size: 1.1rem;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
-      
-      .feedback-form button:hover {
-        background-color: #0095dd;
-      }
 
     @media screen and (max-width: 768px) {
       
@@ -145,9 +83,6 @@
         font-size: 2.2rem;
       }
 
-      .feedback-form {
-        padding: 0 1rem;
-      }
     }
 </style>
 </head>
@@ -249,46 +184,6 @@
 
     </div>
   </section>
-
-<!-- SEZIONE FEEDBACK -->
-
-<section class="user-feedback-section">
-  <h2>🗳️ Dicci la tua!</h2>
-  <p class="description">
-    Quale tra queste novità vorresti vedere per prima su MyMate? <br>
-    Hai in mente una funzione utile che non è ancora presente? Faccelo sapere!
-  </p>
-
-  <form class="feedback-form" id="feedbackForm" action="https://docs.google.com/forms/d/e/1FAIpQLSdF-otcmz4pW5SsyALViVB-4usfuPFdJAJfzBNa2FSve5L02g/formResponse" method="POST" target="_blank">
-    <div class="form-group">
-      <label for="priorita">Scegli la funzionalità che vorresti prima:</label>
-      <select id="priorita" name="entry.306717700" required>
-        <option value="">-- Seleziona un'opzione --</option>
-        <option value="📂 Modifica file in app">📂 Modifica file in app</option>
-        <option value="🧠 Schemi e Riassunti">🧠 Schemi e Riassunti</option>
-        <option value="🃏 Flashcards">🃏 Flashcards</option>
-        <option value="🎤 Simulazione interrogazione">🎤 Simulazione interrogazione</option>
-        <option value="📝 Quiz">📝 Quiz</option>
-        <option value="🎮 Gamification">🎮 Gamification</option>
-        <option value="📅 Pianificazione con AI">📅 Pianificazione con AI</option>
-        <option value="🎧 Podcast">🎧 Podcast</option>
-        <option value="🛍️ Marketplace">🛍️ Marketplace</option>
-        <option value="🤝 Partnership di valore">🤝 Partnership di valore</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="idea">Hai un'idea o una funzione che ti piacerebbe vedere?</label>
-      <textarea id="idea" name="entry.1092554409" rows="5" placeholder="Scrivi qui la tua proposta..."></textarea>
-    </div>
-
-    <button type="submit" id="submitFeedbackBtn">
-      Invia
-    </button>
-  </form>
-</section>
-
-  
 
 <!-- FOOTER -->
 
